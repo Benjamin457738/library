@@ -1,0 +1,88 @@
+/* Remove extra left and right margins, due to padding */
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+}
+
+.book-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+/* Clear floats after the columns */
+.book-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.panel__image.panel__image--book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 60px;
+}
+
+.books__book__img {
+  will-change: transform;
+  transform-origin: 0 100%;
+  transform: rotate(-10deg);
+  transition: transform 0.3s ease-out;
+}
+
+.books__book__img:hover {
+    transform: rotate(0);
+}
+
+.books__book__image:hover {
+    position: relative;
+}
+.book-book-book-img{
+    /* margin-top: 50px; */
+	width: 200px;
+	height: 300px;
+    cursor: pointer;
+}
+.start-btn{
+    padding: 0px 20px;
+    font-size: 50px;
+    font-weight: 800;
+    width: 200px;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 20px;
+}
+.start-btn:hover{
+    color: rgb(212, 151, 20);
+}
+.delete-btn{
+    border:1px solid rgb(230, 137, 16);
+    background-color: white;
+    border-radius: 10px;
+    padding:0px 50px;
+    cursor: pointer;
+    font-size: 40px;
+    color: rgb(230, 137, 16);
+}
+.delete-btn:hover{
+    background-color:rgb(230, 137, 16) ;
+    color:white;
+}
